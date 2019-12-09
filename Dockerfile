@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM kfei/slack-cleaner
 
 COPY LICENSE README.md /
 
