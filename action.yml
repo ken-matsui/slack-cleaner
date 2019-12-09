@@ -1,12 +1,56 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
-inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+name: 'Slack Cleaner'
+description: 'slack-cleaner for GitHub Actions'
+author: 'Ken Matsui'
+inputs:
+  token:
+    description: 'Slack API legacy token (https://api.slack.com/custom-integrations/legacy-tokens)'
+    required: true
+  rate:
+    description: 'Delay between API calls (in seconds)'
+    required: false
+  message:
+    description: 'Delete messages'
+    required: false
+    default: 'false'
+  file:
+    description: 'Delete files'
+    required: false
+    default: 'false'
+  channel:
+    description: "Channel name's, e.g., general"
+    required: false
+  direct:
+    description: "Direct message's name, e.g., sherry"
+    required: false
+  group:
+    description: "Private group's name"
+    required: false
+  mpdirect:
+    description: "Multiparty direct message's name, e.g., sherry,james,johndoe"
+    required: false
+  user:
+    description: 'Delete messages/files from certain user'
+    required: false
+  bot:
+    description: 'Delete messages from bots'
+    required: false
+    default: 'false'
+  after:
+    description: 'Delete messages/files newer than this time (YYYYMMDD)'
+    required: false
+  before:
+    description: 'Delete messages/files older than this time (YYYYMMDD)'
+    required: false
+  types:
+    description: 'Delete files of a certain type, e.g., posts,pdfs'
+    required: false
+  perform:
+    description: 'Perform the task'
+    required: false
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.myInput }}
+branding:
+  icon: 'delete'
+  color: 'green'
