@@ -23,7 +23,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@master
+      - uses: matken11235/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -78,7 +78,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@master
+      - uses: matken11235/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           rate: '1'
@@ -103,7 +103,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@master
+      - uses: matken11235/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -126,7 +126,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@master
+      - uses: matken11235/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -149,7 +149,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@master
+      - uses: matken11235/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -174,7 +174,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@master
+      - uses: matken11235/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -197,7 +197,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@master
+      - uses: matken11235/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -220,7 +220,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@master
+      - uses: matken11235/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -243,7 +243,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@master
+      - uses: matken11235/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -267,7 +267,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@master
+      - uses: matken11235/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           file: true
@@ -289,7 +289,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@master
+      - uses: matken11235/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           file: true
@@ -311,7 +311,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@master
+      - uses: matken11235/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           file: true
