@@ -23,7 +23,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@v1
+      - uses: ken-matsui/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -36,13 +36,13 @@ jobs:
 ## Input parameters
 
 The only required parameter is `token`.
-It should be a Slack legacy token, and you can get from https://api.slack.com/custom-integrations/legacy-tokens.
+It should be a Slack legacy token, and you can get it from https://api.slack.com/custom-integrations/legacy-tokens.
 
-It should start with `xoxp`, and not like bot tokens with `xoxb`.
+It should start with `xoxp`, not like bot token with `xoxb`.
 
-And you should set it to your GitHub repository secrets. 
+And you need to set it to your GitHub repository secrets. 
 
-Please refer https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets to know how to set and for more details.
+Please refer https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets to know how to do that and for more details.
 
 | Parameter Name | Required  | Default  | Description |
 |:--------------:|:---------:|:--------:|:------------|
@@ -78,14 +78,17 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@v1
+      - name: Get datetime
+        id: datetime
+        run: echo "::set-output name=value::$(date -d '-5 days' '+%Y%m%d')"
+      - uses: ken-matsui/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           rate: '1'
           message: true
           channel: 'notifications'
           user: '*'
-          before: "$(date -v -1m '+%Y%m%d')"  # You can use bash style command.
+          before: ${{ steps.datetime.outputs.value }}
           perform: true
 ```
 </div></details>
@@ -103,7 +106,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@v1
+      - uses: ken-matsui/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -126,7 +129,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@v1
+      - uses: ken-matsui/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -149,7 +152,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@v1
+      - uses: ken-matsui/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -174,7 +177,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@v1
+      - uses: ken-matsui/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -197,7 +200,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@v1
+      - uses: ken-matsui/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -220,7 +223,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@v1
+      - uses: ken-matsui/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -243,7 +246,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@v1
+      - uses: ken-matsui/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           message: true
@@ -267,7 +270,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@v1
+      - uses: ken-matsui/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           file: true
@@ -289,7 +292,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@v1
+      - uses: ken-matsui/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           file: true
@@ -311,7 +314,7 @@ jobs:
   clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: matken11235/slack-cleaner@v1
+      - uses: ken-matsui/slack-cleaner@v1
         with:
           token: ${{ secrets.SLACK_LEGACY_TOKEN }}
           file: true
